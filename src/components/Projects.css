@@ -1,0 +1,131 @@
+.projects {
+  background: #f8f9fa;
+  padding: 100px 0;
+}
+
+.projects h2 {
+  color: #2c3e50;
+  margin-bottom: 60px;
+  font-size: 2.8rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 30px;
+}
+
+.project-info h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.project-link {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.project-link:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.project-link.demo {
+  background: #667eea;
+  color: white;
+}
+
+.project-link.demo:hover {
+  background: #5a6fd8;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .project-info {
+    padding: 25px;
+  }
+  
+  .projects h2 {
+    font-size: 2.2rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+}
