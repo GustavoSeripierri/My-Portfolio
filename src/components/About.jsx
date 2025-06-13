@@ -18,6 +18,13 @@ function About() {
             </p>
           </div>
         </div>
+
+        <div className="passion-quote">
+          <blockquote>
+            "Escolha um trabalho que você ame e você nunca terá que trabalhar um dia sequer na vida."
+            <cite>– Confúcio</cite>
+          </blockquote>
+        </div>
       </div>
     </section>
   );
