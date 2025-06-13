@@ -45,20 +45,6 @@
   gap: 0.5rem;
 }
 
-.logo-icon {
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-}
-
 .logo-text {
   font-size: 1.5rem;
   font-weight: 600;
@@ -141,6 +127,7 @@
 .greeting {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.1rem;
@@ -149,7 +136,9 @@
 
 .wave {
   font-size: 1.5rem;
+  color: #ffd93d;
   animation: wave 2s ease-in-out infinite;
+  margin-right: 0.5rem;
 }
 
 @keyframes wave {
@@ -240,6 +229,9 @@
 }
 
 .social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #cbd5e1;
   text-decoration: none;
   font-weight: 500;
@@ -247,6 +239,10 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon {
+  font-size: 1.2rem;
 }
 
 .social-link:hover {
@@ -317,10 +313,12 @@
   font-size: 2rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.2);
   animation: float 3s ease-in-out infinite;
+  width: 70px;
+  height: 70px;
 }
 
 .element-1 {

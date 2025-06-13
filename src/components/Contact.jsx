@@ -36,10 +36,10 @@ function Contact() {
                 <strong>Email:</strong> gustavoseripierri@gmail.com
               </div>
               <div className="contact-method">
-                <strong>LinkedIn:</strong> https://www.linkedin.com/in/gustavo-seripierri-da-conceição/
+                <strong>LinkedIn:</strong>linkedin.com/in/gustavo-seripierri-da-conceição/
               </div>
               <div className="contact-method">
-                <strong>GitHub:</strong> https://github.com/GustavoSeripierri
+                <strong>GitHub:</strong>github.com/GustavoSeripierri
               </div>
             </div>
           </div>
