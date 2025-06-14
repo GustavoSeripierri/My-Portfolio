@@ -1,0 +1,141 @@
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  5px;
+  background: #2d3436;
+  position: relative;
+  overflow: hidden;
+}
+
+.divider-line {
+  flex: 1;
+  height: 2px;
+  position: relative;
+  max-width: 200px;
+}
+
+.divider-gradient-left {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #55efc4 20%, 
+    #74b9ff 50%, 
+    #a29bfe 80%, 
+    transparent 100%
+  );
+  animation: shimmer-left 3s ease-in-out infinite;
+}
+
+.divider-gradient-right {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #55efc4 20%, 
+    #74b9ff 50%, 
+    #a29bfe 80%, 
+    transparent 100%
+  );
+  animation: shimmer-right 3s ease-in-out infinite;
+}
+
+.divider-icon {
+  margin: 0 2rem;
+  position: relative;
+}
+
+.divider-icon span {
+  font-size: 1.5rem;
+  color: #74b9ff;
+  background: linear-gradient(45deg, #55efc4, #74b9ff, #a29bfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(116, 185, 255, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes shimmer-left {
+  0%, 100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer-right {
+  0%, 100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Variação alternativa com pontos */
+.divider.dots {
+  padding: 1.5rem 0;
+}
+
+.divider.dots::before {
+  content: '• • • • •';
+  color: #74b9ff;
+  font-size: 1.2rem;
+  letter-spacing: 1rem;
+  opacity: 0.6;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .divider {
+    padding: 1.5rem 0;
+  }
+  
+  .divider-line {
+    max-width: 120px;
+  }
+  
+  .divider-icon {
+    margin: 0 1rem;
+  }
+  
+  .divider-icon span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .divider {
+    padding: 1rem 0;
+  }
+  
+  .divider-line {
+    max-width: 80px;
+  }
+  
+  .divider-icon {
+    margin: 0 0.5rem;
+  }
+}

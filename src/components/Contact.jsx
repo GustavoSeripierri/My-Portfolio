@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { FaEnvelope, FaLinkedin, FaGithub, FaCopy, FaCheck } from 'react-icons/fa';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -7,6 +8,48 @@ function Contact() {
     email: '',
     message: ''
   });
+
+  const [copiedStates, setCopiedStates] = useState({
+    email: false,
+    linkedin: false,
+    github: false
+  });
+
+  const contactInfo = [
+    {
+      id: 'email',
+      icon: <FaEnvelope />,
+      label: 'Email',
+      value: 'gustavoseripierri@gmail.com',
+      copyValue: 'gustavoseripierri@gmail.com'
+    },
+    {
+      id: 'linkedin',
+      icon: <FaLinkedin />,
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/gustavo-seripierri-da-conceição/',
+      copyValue: 'https://linkedin.com/in/gustavo-seripierri-da-conceição/'
+    },
+    {
+      id: 'github',
+      icon: <FaGithub />,
+      label: 'GitHub',
+      value: 'github.com/GustavoSeripierri',
+      copyValue: 'https://github.com/GustavoSeripierri'
+    }
+  ];
+
+  const handleCopy = async (id, text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedStates(prev => ({ ...prev, [id]: true }));
+      setTimeout(() => {
+        setCopiedStates(prev => ({ ...prev, [id]: false }));
+      }, 2000);
+    } catch (err) {
+      console.error('Erro ao copiar:', err);
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -30,17 +73,25 @@ function Contact() {
         <div className="contact-content">
           <div className="contact-info">
             <h3>Vamos conversar!</h3>
-            <p>Estou sempre aberto a novas oportunidades e projetos interessantes.</p>
-            <div className="contact-methods">
-              <div className="contact-method">
-                <strong>Email:</strong> gustavoseripierri@gmail.com
-              </div>
-              <div className="contact-method">
-                <strong>LinkedIn:</strong>linkedin.com/in/gustavo-seripierri-da-conceição/
-              </div>
-              <div className="contact-method">
-                <strong>GitHub:</strong>github.com/GustavoSeripierri
-              </div>
+            <p>Estou sempre aberto a novas oportunidades e projetos interessantes.</p>            <div className="contact-methods">
+              {contactInfo.map((contact) => (
+                <div key={contact.id} className="contact-method">
+                  <div className="contact-method-header">
+                    <div className="contact-icon-label">
+                      <span className="contact-icon">{contact.icon}</span>
+                      <strong>{contact.label}:</strong>
+                    </div>
+                    <button 
+                      className="copy-btn"
+                      onClick={() => handleCopy(contact.id, contact.copyValue)}
+                      title={`Copiar ${contact.label}`}
+                    >
+                      {copiedStates[contact.id] ? <FaCheck /> : <FaCopy />}
+                    </button>
+                  </div>
+                  <span className="contact-value">{contact.value}</span>
+                </div>
+              ))}
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>

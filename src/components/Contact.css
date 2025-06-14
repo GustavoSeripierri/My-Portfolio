@@ -1,11 +1,14 @@
 .contact {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2d3436;
   color: white;
   padding: 100px 0;
 }
 
 .contact h2 {
-  color: white;
+  background: linear-gradient(45deg, #55efc4, #74b9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 60px;
   font-size: 2.8rem;
 }
@@ -43,11 +46,69 @@
 }
 
 .contact-method {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(129, 236, 236, 0.1);
   padding: 20px;
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(129, 236, 236, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  background: rgba(129, 236, 236, 0.15);
+  border-color: rgba(129, 236, 236, 0.4);
+  transform: translateY(-2px);
+}
+
+.contact-method-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact-icon-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.contact-value {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-left: 28px;
+}
+
+.copy-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  min-width: 35px;
+  height: 35px;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
 }
 
 .contact-method strong {
@@ -57,11 +118,11 @@
 }
 
 .contact-form {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(129, 236, 236, 0.1);
   padding: 40px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(129, 236, 236, 0.3);
 }
 
 .contact-form input,
@@ -92,8 +153,8 @@
 
 .contact-form button {
   width: 100%;
-  background: white;
-  color: #667eea;
+  background: #74b9ff;
+  color: #2d3436;
   border: none;
   padding: 15px 30px;
   font-size: 1.1rem;
@@ -104,9 +165,8 @@
 }
 
 .contact-form button:hover {
-  background: #f8f9fa;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px #74baff38;
 }
 
 .contact-form button:active {

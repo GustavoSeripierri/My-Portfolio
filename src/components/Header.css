@@ -6,7 +6,7 @@
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2d3436;
   position: relative;
   overflow: hidden;
 }
@@ -36,7 +36,8 @@
   position: relative;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(34, 43, 46, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
@@ -73,21 +74,19 @@
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
 .nav-cta {
-  background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important;
+  background: #74b9ff;
   padding: 0.7rem 1.5rem !important;
   border-radius: 25px !important;
   font-weight: 600 !important;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  color: #2d3436 !important;
 }
 
 .nav-cta:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4) !important;
 }
 
 /* Hero Section */
@@ -136,7 +135,7 @@
 
 .wave {
   font-size: 1.5rem;
-  color: #ffd93d;
+  color: #e2b728;
   animation: wave 2s ease-in-out infinite;
   margin-right: 0.5rem;
 }
@@ -156,7 +155,7 @@
   display: block;
   font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #ffd93d, #ff6b6b);
+  background: linear-gradient(45deg, #55efc4, #74b9ff, #a29bfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -201,25 +200,24 @@
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-  color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  background: #74b9ff;
+  color: #2d3436;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 25px rgba(255, 107, 107, 0.5);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(0, 255, 255, 0.3);
   backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.5);
   transform: translateY(-3px);
 }
 
@@ -281,15 +279,15 @@
   top: -20px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #ffd93d, #ff6b6b);
+  background: linear-gradient(45deg, #e0dccb54, #202124);
   border-radius: 50%;
   opacity: 0.3;
-  animation: pulse 3s ease-in-out infinite;
+  animation: pulse 5s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(2); }
 }
 
 .profile-img {

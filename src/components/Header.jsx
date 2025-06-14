@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import GustavoImage from '../assets/Gustavo.jpeg';
 import CVFile from '../assets/CV_GustavoSeripierri.pdf';
-import { FaReact, FaRocket, FaLaptopCode, FaArrowRight, FaDownload, FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { FaReact, FaRocket, FaLaptopCode, FaArrowRight, FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiHand } from 'react-icons/hi';
 
 function Header() {
@@ -54,17 +54,13 @@ function Header() {
                 <FaDownload className="download" />
               </button>
             </div>            <div className="social-links">
-              <a href="#" className="social-link">
+              <a href="https://github.com/GustavoSeripierri" className="social-link">
                 <FaGithub className="social-icon" />
                 GitHub
               </a>
-              <a href="#" className="social-link">
+              <a href="https://www.linkedin.com/in/gustavo-seripierri-da-conceição-bb792a261/" className="social-link">
                 <FaLinkedin className="social-icon" />
                 LinkedIn
-              </a>
-              <a href="#" className="social-link">
-                <FaEnvelope className="social-icon" />
-                Email
               </a>
             </div>
           </div>

@@ -1,22 +1,8 @@
 .skills {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #2d3436;
   padding: 120px 0;
   position: relative;
   overflow: hidden;
-}
-
-.skills::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 60%, rgba(52, 211, 153, 0.1) 0%, transparent 50%);
-  animation: backgroundFloat 20s ease-in-out infinite;
 }
 
 @keyframes backgroundFloat {
@@ -41,7 +27,7 @@
 .skills-header h2 {
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #55efc4 0%, #74b9ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +37,7 @@
 
 .skills-subtitle {
   font-size: 1.3rem;
-  color: #6b7280;
+  color: #e0e0e0;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -77,16 +63,16 @@
   padding: 1rem 1.5rem;
   border: none;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #374151;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  color: #e0e0e0;
+  border: 2px solid rgba(116, 185, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .category-btn:hover {
@@ -95,11 +81,11 @@
 }
 
 .category-btn.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: rgba(255, 255, 255, 0.3);
+  background: #74b9ff;
+  color: #2d3436;
+  border-color: rgba(116, 185, 255, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 1px 25px rgba(2, 119, 148, 0.3);
 }
 
 .category-icon {
@@ -136,12 +122,12 @@
 
 /* Skill Cards */
 .skill-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(116, 185, 255, 0.1);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -160,7 +146,8 @@
 
 .skill-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(116, 185, 255, 0.2);
+  border-color: rgba(116, 185, 255, 0.3);
 }
 
 .skill-header {
@@ -182,7 +169,7 @@
 .skill-name {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -193,7 +180,7 @@
 }
 
 .skill-description p {
-  color: #6b7280;
+  color: #b0b0b0;
   font-size: 0.9rem;
   margin: 0;
   font-style: italic;
@@ -206,10 +193,11 @@
   gap: 2rem;
   margin-bottom: 4rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(129, 236, 236, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(129, 236, 236, 0.2);
 }
 
 .stat-item {
@@ -221,7 +209,7 @@
   display: block;
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #55efc4 0%, #74b9ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -230,7 +218,7 @@
 
 .stat-label {
   font-size: 1rem;
-  color: #6b7280;
+  color: #dfe6e9;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
